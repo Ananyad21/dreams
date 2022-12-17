@@ -9,8 +9,7 @@
   <style>
     body {
       margin: 40px;
-      background-color: #808080;
-      background-image: linear-gradient(315deg, #54ded5 19%, #a0c5ba 85%);
+      background-image:url("C:\Users\LENOVO\Desktop\50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg");
     }
 
     .container {
@@ -19,7 +18,7 @@
     }
 
     .btn-container {
-      background: white;
+      background: rgb(215, 159, 203);
       box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
       border-radius: 5px;
       padding: 10px;
@@ -31,7 +30,7 @@
 
     .btn-primary {
       border-color:rgb(126, 14, 14)!important;
-      color: #f4f4f4;
+      color: #f3c0c0;
       text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
       background-color: #cb7418 !important;
       border-color: #9054de !important;
@@ -60,64 +59,65 @@
         <h1 class="head">Breast Cancer Detection</h1>
       </div>
     </div>
-    <div class="row"   >
-      <div class="row"   >
-      <div class="col-md-12"  >
-        <div class="btn-container"  >
+    <div class="row">
+      <div class="col-md-12">
+        <div class="btn-container">
 
           <form action="{{ url_for('predict')}}" method="post" class="form-inline">
-            <div class="row"  >
-              <div class="col-md-6"  >
-        <img class="image" src="{{url_for('static', filename='img.jpg')}} "align="right" width="100%" height="100%" />
-              </div>
+            <div class="row">
+              
               <div class="col-md-6">
-              <div class="container">
-                  <h4>Enter Cell Details</h4>
-               <div class="form-group">
-                    <label for="clump_thickness">Clump Thickness </label>
+                <div class="container">
+                  <h4><b><i>Enter Cell Details</i></b></h4>
+                  <div class="form-group">
+                    <label for="clump_thickness"><b>Clump Thickness </b> </label>
                     <input type="text" class="form-control" name="clump_thickness" required="required">
                   </div>
                   <div class="form-group">
-                    <label for="uniform_cell_size">Uniform Cell size</label>
+                    <label for="uniform_cell_size"><b>Uniform Cell size</b></label>
                     <input type="text" class="form-control" name="uniform_cell_size" required="required">
                   </div>
                   <div class="form-group">
-                    <label for="uniform_cell_shape">Uniform Cell shape</label>
+                    <label for="uniform_cell_shape"><b>Uniform Cell shape</b></label>
                     <input type="text" class="form-control" name="uniform_cell_shape" required="required" />
                   </div>
                   <div class="form-group">
-                    <label for="marginal_adhesion">Marginal Adhesion</label>
+                    <label for="marginal_adhesion"><b>Marginal Adhesion</b></label>
                     <input type="text" class="form-control" name="marginal_adhesion" required="required" />
                   </div>
                   <div class="form-group">
-                    <label for="single_epithelial_size">Single Epithelial Cell Size</label>
+                    <label for="single_epithelial_size"><b>Single Epithelial Cell Size</b></label>
                     <input type="text" class="form-control" name="single_epithelial_size" required="required" />
                   </div>
                   <div class="form-group">
-                    <label for="bare_nuclei">Bare Nuclei</label>
+                    <label for="bare_nuclei"><b>Bare Nuclei</b></label>
                     <input type="text" class="form-control" name="bare_nuclei" required="required" />
                   </div>
                   <div class="form-group">
-                    <label for="bland_chromatin">Bland Chromatin</label>
+                    <label for="bland_chromatin"><b>Bland Chromatin</b></label>
                     <input type="text" class="form-control" name="bland_chromatin" required="required" />
                   </div>
                   <div class="form-group">
-                    <label for="normal_nucleoli">Normal Nucleoli</label>
+                    <label for="normal_nucleoli"><b>Normal Nucleoli</b></label>
                     <input type="text" class="form-control" name="normal_nucleoli" required="required" />
                   </div>
 
                   <div class="form-group">
-                   <label for="mitoses">Mitoses</label>
-                 <input type="text" class="form-control" name="mitoses" required="required" />
+                    <label for="mitoses"><b>Mitoses</b></label>
+                    <input type="text" class="form-control" name="mitoses" required="required" />
                   </div>
                   <button type="submit" class="btn btn-primary btn-lg">Predict Cancer</button>
                 </div>
               </div>
+             
+            </div>
+            <div class="col-md-6">
+              <img class="image" src="{{url_for('static', filename='img.jpg')}}" width="100%" height="100%" />
             </div>
           </form>
         <br />
         <center>
-          <h1 style="background:#5454de">{{prediction_text}}</h1>
+          <h1 style="background:#de5499">{{prediction_text}}</h1>
         </center>
         <br />
 </body>
